@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: linear-gradient(
+            rgba($color-grey-dark-3, .6) ,
+            rgba($color-grey-dark-3, .3) ),
+        url(/img/logo.jpg);
+    background-size: cover;
+    background-position: top;
+
+    &__logo-box {
+        height: 7vh;
+        background-color: $color-black;
+        opacity: 0;
+    }
+
+    &__text-box {
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;      
+    }
+}

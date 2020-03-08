@@ -2,16 +2,15 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: linear-gradient(
-            rgba($color-grey-dark-3, .6) ,
-            rgba($color-grey-dark-3, .3) ),
+    background-image: linear-gradient(rgba($color-grey-dark-3, .6),
+            rgba($color-grey-dark-3, .3)),
         url(/img/logo.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: center;
 
     &__logo-box {
         height: 7vh;
-        background-color: $color-black;
+        background-color: $color-menu-background;
         opacity: 0;
     }
 
@@ -20,6 +19,7 @@
         flex: 1;
         overflow: hidden;
         align-items: center;
-        justify-content: center;      
+        justify-content: center;
+
     }
 }

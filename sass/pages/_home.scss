@@ -1,21 +1,17 @@
-.section-about {
+.c-section {
 
- }
+    & section:nth-child(even) {
+        background-color: $color-grey-light-1;
+    }
 
-.section-services {
-    background-color: $color-grey-light-1;     
-  
-}
+    // &__about {}
 
-.section-forsale {
+    // &__services {}
 
-}
+    // &__forsale {}
 
+    // &__pricelist {}
 
- .section-pricelist {
-    background-color: $color-grey-light-1;
- }
-
- .section-contact {
+    // &__section-contact {}
 
 }

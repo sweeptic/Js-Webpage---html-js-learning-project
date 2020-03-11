@@ -5,23 +5,15 @@ body {
     color: $color-grey-dark-2;
 }
 
-.heading-tertiary {
-    padding-top: 2rem;
-    color: $color-grey-dark-3;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: .5rem;
-    overflow: hidden;
-    // word-wrap: break-word;
-}
+
 
 .paragraph {
     font-size: $default-font-size;
     padding-bottom: 3rem;
 }
 
-.heading-primary {
+
+.c-heading-primary {
     display: flex;
     
     flex-flow: column;
@@ -53,4 +45,16 @@ body {
         margin-bottom: 9.6rem;
        
     }
+  
+}
+
+.heading-tertiary {
+    padding-top: 2rem;
+    color: $color-grey-dark-3;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .5rem;
+    overflow: hidden;
+    // word-wrap: break-word;
 }

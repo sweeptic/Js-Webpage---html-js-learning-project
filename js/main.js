@@ -1,31 +1,25 @@
 $(document).ready(function ($) {
 
-    var secondaryNav = $('.navigation'),
-        secondaryNavTopPosition = secondaryNav.offset().top;
-    contentSection = $('.section-waypoint')
-
-    $(window).on('scroll', function () {
-
-      
-            if ($(window).scrollTop() > secondaryNavTopPosition) {
-                $(secondaryNav).addClass('is-fixed');
-
-                setTimeout(function () {
-                    secondaryNav.addClass('animate-children');
-                }, 50);
-
-            } else {
-                $(secondaryNav).removeClass('is-fixed');
-
-                setTimeout(function () {
-                    secondaryNav.removeClass('animate-children');
-                }, 50);
-            }
-        
+    var secondaryNav = $('.c-navigation'),
+        contentSection = $('.section-waypoint'),
+        secondaryNavTopPosition = secondaryNav.offset().top
 
 
+    function navigationHandler() {
+        if ($(window).scrollTop() > secondaryNavTopPosition) {
+            $(secondaryNav).addClass('js-is-fixed');
+            setTimeout(function () {
+                secondaryNav.addClass('js-animate-children');
+            }, 50);
+        } else {
+            $(secondaryNav).removeClass('js-is-fixed');
+            setTimeout(function () {
+                secondaryNav.removeClass('js-animate-children');
+            }, 50);
+        }
         updateSecondaryNavigation();
-    });
+    };
+
 
     //on desktop - update the active link in the secondary fixed navigation
     function updateSecondaryNavigation() {
@@ -42,26 +36,23 @@ $(document).ready(function ($) {
         )
     }
 
-    //smooth scrolling when clicking on the secondary navigation items
-    secondaryNav.find('ul a').on('click', function (event) {
+    //smooth scrolling when clicking on the secondary navigation items 
+    function smoothScrolling(event) {
         event.preventDefault();
         var target = $(this.hash);
-        console.log(this);
-
         $('body,html').animate({
             'scrollTop': target.offset().top - secondaryNav.height() + 1
         }, 400)
-    })
+    }
 
-
-    $('.navigation__trigger').on('click', function (event) {
+    function toggleMobileMenu(event) {
         event.preventDefault();
-        $(this).toggleClass('menu-is-open');
-        secondaryNav.find('ul').toggleClass('is-visible');
-    })
+        $(this).toggleClass('js-menu-is-open');
+        secondaryNav.find('ul').toggleClass('js-is-visible');
+    }
 
 
-
-
-
+    $(window).on('scroll', navigationHandler)
+    $('.c-navigation__mobile-menu').on('click', toggleMobileMenu)
+    secondaryNav.find('ul a').on('click', smoothScrolling)
 });

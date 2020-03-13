@@ -34,7 +34,7 @@
 
         &:link,
         &:visited {
-            color: $color-grey-dark-2;
+            color: $color-menu-text;
         }
 
         &:hover,
@@ -48,7 +48,8 @@
 
     &__text {
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 500;
+        letter-spacing: .1rem;
     }
 
 
@@ -60,7 +61,8 @@
         right: 3vh;
         width: 6rem;
         height: 6rem;
-        background-color: $color-menu-background;
+        background-color:  rgba($color-primary, .85);    
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
         border-radius: 6px;
         z-index: 2;
         
@@ -198,6 +200,8 @@
         left: 0;
         top: 0;
         background-color: rgba($color-menu-background, 1);
+        border-bottom: 1px solid black;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
         transition: background-color .4s, height .3s;
         width: 100%;
     }
@@ -222,6 +226,7 @@
             transform-origin: (100% 100%);
             transition: transform .3s, visibility 0s;
             box-shadow: 0 1rem 2rem rgba($color-black, .15);
+            
         }
 
         &__item {

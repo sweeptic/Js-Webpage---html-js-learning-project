@@ -4,14 +4,15 @@
     min-height: 100vh;
     background-image: linear-gradient(rgba($color-grey-dark-3, .6),
             rgba($color-grey-dark-3, .3)),
-        url(/img/logo.jpg);
+        url(/img/hardware-3509898_1920.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
+    
 
     &__logo-box {
-        height: 7vh;
-        background-color: $color-menu-background;
-        opacity: 0;
+        // height: 2vh;
+        // background-color: $color-menu-background;
+        // opacity: 0;
     }
 
     &__text-box {
@@ -20,6 +21,8 @@
         overflow: hidden;
         align-items: center;
         justify-content: center;
+        padding-top: 10rem;
+        padding-left: 4rem;
 
     }
 }

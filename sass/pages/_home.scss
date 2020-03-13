@@ -1,7 +1,11 @@
 .c-section {
 
     & section:nth-child(even) {
-        background-color: $color-grey-light-1;
+        background-color: $color-menu-background;
+    }
+
+    & section:nth-child(even) .heading-tertiary {
+        color: $color-grey-dark-2;
     }
 
     // &__about {}

@@ -48,20 +48,23 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: 'Lato', sans-serif;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  color: #ffffff;
   text-transform: uppercase;
 }
 
 .c-heading-primary--main {
-  margin-bottom: 2.2rem;
-  font-size: 10rem;
+  text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  background-color: rgba(47, 54, 64, 0.33);
+  border-radius: 4rem 0 0 0;
+  font-size: 12rem;
   font-weight: 300;
-  letter-spacing: 2.6rem;
+  letter-spacing: 3.1rem;
   text-align: center;
+  color: #ffffff;
 }
 
 .c-heading-primary--sub {
@@ -69,12 +72,15 @@ body {
   font-weight: 500;
   letter-spacing: 1.4rem;
   text-align: center;
-  background-color: rgba(245, 72, 74, 0.5);
+  background-color: rgba(255, 63, 52, 0.7);
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   padding: 2rem;
-  border-radius: 3px;
+  border-radius: 0 0 4rem 0;
   margin-bottom: 9.6rem;
+  color: #ffffff;
+  padding-left: 15rem;
+  padding-right: 15rem;
 }
 
 .heading-tertiary {
@@ -85,6 +91,7 @@ body {
   font-weight: 700;
   letter-spacing: .5rem;
   overflow: hidden;
+  text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
 
 .u-center-text {
@@ -124,16 +131,10 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(51, 51, 51, 0.6)), to(rgba(51, 51, 51, 0.3))), url(/img/logo.jpg);
-  background-image: linear-gradient(rgba(51, 51, 51, 0.6), rgba(51, 51, 51, 0.3)), url(/img/logo.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(51, 51, 51, 0.6)), to(rgba(51, 51, 51, 0.3))), url(/img/hardware-3509898_1920.jpg);
+  background-image: linear-gradient(rgba(51, 51, 51, 0.6), rgba(51, 51, 51, 0.3)), url(/img/hardware-3509898_1920.jpg);
   background-size: cover;
-  background-position: center;
-}
-
-.c-header__logo-box {
-  height: 7vh;
-  background-color: #030d18;
-  opacity: 0;
+  background-position: bottom;
 }
 
 .c-header__text-box {
@@ -150,12 +151,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 10rem;
+  padding-left: 4rem;
 }
 
 .c-navigation {
   margin-top: auto;
   font-size: 1.6rem;
-  background-color: rgba(3, 13, 24, 0.8);
+  background-color: rgba(47, 54, 64, 0.8);
   /*add byed JS*/
   /*added by JS*/
 }
@@ -209,12 +212,12 @@ body {
 }
 
 .c-navigation__link:link, .c-navigation__link:visited {
-  color: #999;
+  color: #ffffff;
 }
 
 .c-navigation__link:hover, .c-navigation__link:active,
 .c-navigation__link.active span {
-  color: #f5484a;
+  color: #ff3f34;
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
   -webkit-backface-visibility: hidden;
@@ -223,7 +226,8 @@ body {
 
 .c-navigation__text {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
+  letter-spacing: .1rem;
 }
 
 .c-navigation__mobile-menu {
@@ -233,7 +237,9 @@ body {
   right: 3vh;
   width: 6rem;
   height: 6rem;
-  background-color: #030d18;
+  background-color: rgba(255, 63, 52, 0.85);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   border-radius: 6px;
   z-index: 2;
 }
@@ -342,7 +348,10 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  background-color: #030d18;
+  background-color: #2f3640;
+  border-bottom: 1px solid black;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   -webkit-transition: background-color .4s, height .3s;
   transition: background-color .4s, height .3s;
   width: 100%;
@@ -364,7 +373,7 @@ body {
     border-radius: 5px;
     width: 90%;
     max-width: 40rem;
-    background: rgba(3, 13, 24, 0.9);
+    background: rgba(47, 54, 64, 0.9);
     bottom: 3vh;
     right: 3vh;
     z-index: 1;
@@ -387,7 +396,7 @@ body {
         -ms-flex-align: start;
             align-items: flex-start;
     padding: 2rem;
-    border-top: 1px solid #051426;
+    border-top: 1px solid #353d49;
   }
   .c-navigation__icon {
     display: none;
@@ -401,6 +410,10 @@ body {
 }
 
 .c-section section:nth-child(even) {
-  background-color: #f7f7f7;
+  background-color: #2f3640;
+}
+
+.c-section section:nth-child(even) .heading-tertiary {
+  color: #999;
 }
 /*# sourceMappingURL=main.css.map */

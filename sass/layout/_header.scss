@@ -3,10 +3,11 @@
     flex-direction: column;
     min-height: 100vh;
     background-image: linear-gradient(rgba($color-grey-dark-3, .6),
-            rgba($color-grey-dark-3, .3)),
-        url(/img/hardware-3509898_1920.jpg);
+            rgba($color-grey-dark-3, .2)),
+        url(/img/magnus-engo-W4lcqyH9r8c-unsplash.jpg);
     background-size: cover;
-    background-position: bottom;
+    background-position: right;
+    background-attachment: fixed;
     
 
     &__logo-box {
@@ -18,11 +19,10 @@
     &__text-box {
         display: flex;
         flex: 1;
-        overflow: hidden;
+         overflow: hidden;
         align-items: center;
         justify-content: center;
         padding-top: 10rem;
-        padding-left: 4rem;
 
     }
 }

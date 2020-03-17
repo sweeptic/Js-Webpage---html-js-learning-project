@@ -19,10 +19,22 @@
     &__text-box {
         display: flex;
         flex: 1;
-         overflow: hidden;
+        overflow: hidden;
         align-items: center;
         justify-content: center;
-        padding-top: 10rem;
+        // padding-top: 10rem;
+        
+        &-wrapper {
+
+            &-b{
+                // margin-top: .3rem;
+                //  background-color: red;
+                 text-align: center;
+                 color: white;
+                 font-family: 'Italianno', cursive;
+                 font-size: 5.4vw;
+            }
+        }
 
     }
 }

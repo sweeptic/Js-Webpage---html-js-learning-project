@@ -6,7 +6,6 @@ body {
 }
 
 
-
 .paragraph {
     font-size: $default-font-size;
     padding-bottom: 3rem;
@@ -17,62 +16,52 @@ body {
 
 .c-heading-primary {
     display: flex;
-    font-family: 'Lato', sans-serif;
-    flex-flow: column;
-    box-shadow: 0 2rem 2rem rgba($color-black, .15);
-    text-transform: uppercase;
-    text-shadow: 0 1rem 2rem rgba($color-black, .3);
-    margin-bottom: 10rem;
-    border-radius: 10rem 0 10rem 0;
-    //  padding-left: 15rem;
-    //  padding-right: 15rem;
-    width: 90%;
-    max-width: 85rem;
-
-    /*
-    width: 90%;
-            max-width: 40rem;
-            */
-
-
-    &--main {
-        background-color: rgba($color-menu-background, .7);
-        border-radius: 10rem 0 0 0;
-        font-size: 10rem;
-        font-weight: 500;
-        letter-spacing: 1rem;
-        text-align: center;
-        color: $color-header-main;
-        line-height: 13rem;
-        padding: 4rem;
-
-        // background-color: rgba($color-main_background, .7);
-        @include respond(tab-port) {
-            // border-radius: 0;
-        }
+    flex-flow: row;
+    width: 70vw;
+    //   height: 40vh;
+    border: .5rem solid white;
+    align-items: center;
+    
+    &--left {
+        // padding-left: 2vw;
+        padding:  1.7vw;
+        font-family: 'Audiowide', cursive;
+        font-size: 20vw;
+        color: white;
+        line-height: 0;
     }
 
-    &--sub {
-        font-size: 2.2rem;
-        font-weight: 500;
-        letter-spacing: 1rem;
-        text-align: center;
-        background-color: rgba($color_primary, .7);
-        line-height: 5.6rem;
+    &--right {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        align-self: stretch;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 11vw;
+        color: transparent;
+        overflow: hidden;
+        background-color: #fff;
+        // font-weight: 300;
+       
 
-        padding: 2rem;
-        border-radius: 0 0 10rem 0;
+        &-x {
+            background: url(/img/magnus-engo-W4lcqyH9r8c-unsplash.jpg);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            display: block;
+            background-position: bottom;
+            // padding-bottom: 40px;
 
-        color: $color-header-sub;
-        // padding-left: 15rem;
-        // padding-right: 15rem;
+           
 
-        @include respond(tab-port) {
-            // border-radius: 0;
-            letter-spacing: .85rem;
         }
 
     }
+
+
+
+
+
 
 }
 

@@ -1,7 +1,9 @@
 .c-navigation {
     margin-top: auto;
     font-size: $default-font-size;
-    background-color: rgba($color-menu-background, 0.6);
+    background-color: $color-desktop-menu-background;
+    //box-shadow: 0px -1px 5px 0px;
+    box-shadow: 0px 0px 10px 1px $color-black;
 
     &__nav {
         transition: all 0.2s;
@@ -10,26 +12,23 @@
     &__list {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
 
         &.js-is-visible {
             visibility: visible;
             transform: scale(1);
             transition: transform .3s, visibility 0s;
-
-            box-shadow: 0px 0px 10px 1px $color-black;
         }
     }
 
     &__item {
         list-style: none;
         margin: 1.4rem;
+        width: 30%;
     }
 
     &__link {
         display: flex;
         flex-flow: column;
-
         text-decoration: none;
         align-items: center;
         transition: all 0.2s;
@@ -52,14 +51,15 @@
         text-transform: uppercase;
         font-weight: 500;
         letter-spacing: .1rem;
+        
     }
 
     &__icon{
         width: 3.7rem;
         height: 3.7rem;
         padding-bottom: .3rem;
+        fill: $color-white;
     }
-
 
     //mini button for secondary nav
     &__mobile-menu {
@@ -67,10 +67,9 @@
         visibility: hidden;
         bottom: 3vh;
         right: 3vh;
-        width: 6rem;
-        height: 6rem;
-        background-color: rgba($color-primary, .85);
-        //  box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        width: 8rem;
+        height: 8rem;
+           background-color:rgba(0, 0, 0, 0.795); 
         border-radius: 6px;
         z-index: 2;
 
@@ -83,7 +82,7 @@
             &,
             &::before,
             &::after {
-                width: 3rem;
+                width: 5rem;
                 height: 2px;
                 background-color: $color-white;
                 display: inline-block;
@@ -98,48 +97,12 @@
             }
 
             &::before {
-                top: -.9rem;
+                top: -1.3rem;
             }
 
             &::after {
-                top: .9rem;
+                top: 1.3rem;
             }
-
-            // DOT style menu
-            // position: absolute;
-            // background-color: $color-white;
-            // width: 4px;
-            // height: 4px;
-            // border-radius: 50%;
-
-            // //to mixin
-            // top: 50%;
-            // left: 50%;
-            // transform: translateX(-50%) translateY(-50%);
-            // transition: all .3s;
-
-            // &::before,
-            // &::after {
-            //     content: '';
-            //     position: absolute;
-            //     background: inherit;
-            //     width: 100%;
-            //     height: 100%;
-            //     border-radius: 50%;
-            //     transition: all .3s;
-            // }
-
-            // &::before {
-            //     right: -10px;
-            //     transition: all .3s;
-            // }
-
-            // &::after {
-            //     left: -10px;
-            //     transition: all .3s;
-            // }
-
-
         }
 
         //added by JS
@@ -197,8 +160,6 @@
                 transition: all .3s;
             }
 
-           
-
             &__icon {
                 opacity: 0;
                 transition: opacity 0.2s;
@@ -211,11 +172,12 @@
         position: fixed;
         left: 0;
         top: 0;
-        background-color: rgba($color-menu-background, 1);
+         background-color: $color-fixed-desktop-menu-background;
         border-bottom: 1px solid black;
         box-shadow: 0 1rem 2rem rgba($color-black, .15);
         transition: background-color .4s, height .3s;
         width: 100%;
+      
     }
 
     @include respond('tab-land') {
@@ -230,9 +192,7 @@
             border-radius: 5px;
             width: 90%;
             max-width: 40rem;
-            //background-color: rgba($color-menu-background, 0.8);
-
-            background: rgba($color-menu-background, .95);
+            background: $color-mobile-menu-background;
             bottom: 3vh;
             right: 3vh;
             z-index: 1;
@@ -244,10 +204,11 @@
 
         &__item {
             margin: 0;
+            width: 100%;
         }
 
         &__item:not(:last-child) {
-            border-bottom: 1px solid lighten($color-menu-background, 25%);
+            border-bottom: 1px solid $color-mobile-menu-border-background;
         }
 
         &__link {

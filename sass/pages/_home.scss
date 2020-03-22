@@ -1,13 +1,14 @@
 .c-section {
 
     & section:nth-child(even) {
-        background-color: $color-menu-background;
-        color: $color-grey-dark-2
+        background-color: $color-main-even;
+        color: $color-grey-dark-2;
     }
 
     & section:nth-child(odd)  {
         background-color: $color-light-white;
-        color: #030d18;
+         color: $color-black;
+         // #030d18;
     }
 
     & section:nth-child(even) .heading-tertiary {

@@ -4,37 +4,65 @@
     min-height: 100vh;
     background-image: linear-gradient(rgba($color-grey-dark-3, .6),
             rgba($color-grey-dark-3, .2)),
-        url(/img/magnus-engo-W4lcqyH9r8c-unsplash.jpg);
+        url(../img/photo-1472289065668-ce650ac443d2.jpg);
     background-size: cover;
-    background-position: right;
-    background-attachment: fixed;
-    
+    background-position: left;
 
     &__logo-box {
-        // height: 2vh;
-        // background-color: $color-menu-background;
-        // opacity: 0;
-    }
-
-    &__text-box {
-        display: flex;
-        flex: 1;
+        @include absCenterFlex;
+        background-color: $color-grey-dark-4;
         overflow: hidden;
-        align-items: center;
-        justify-content: center;
-        // padding-top: 10rem;
-        
-        &-wrapper {
+        padding-top:7rem;
 
-            &-b{
-                // margin-top: .3rem;
-                //  background-color: red;
-                 text-align: center;
-                 color: white;
-                 font-family: 'Italianno', cursive;
-                 font-size: 5.4vw;
-            }
+        @include respond('tab-land') {     
+             padding-top: 0;
         }
 
+        &-wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            font-size: 6rem;
+            flex: 0 1 70%;
+            @include respond('tab-land') {
+                flex: 0 1 60%;       
+            }
+
+            &>* {
+                @include absCenterFlex;
+            }
+
+            &--emblem {
+                line-height: 100%;
+                font-family: 'Audiowide', cursive;
+                font-size: 20vw;
+                color: white;
+                flex-basis: 20%; //mobile : 60%
+                border-top: .5rem solid white;
+                border-left: .5rem solid white;
+                border-bottom: .5rem solid white;
+
+                @include respond('tab-land') {
+                    flex-basis: 60%;
+                    border-bottom: 0;
+                    border-right: .5rem solid white;
+                }
+            }
+
+            &--companyName {    
+                font-family: 'Montserrat', sans-serif;
+                font-size: 11vw;
+                border: .5rem solid white;
+                color: white;
+            
+            }
+
+            &--description {
+                flex-basis: 100%;
+                overflow: hidden;
+                color: white;
+                font-family: 'Italianno', cursive;
+                font-size: 5.4vw;
+            }
+        }
     }
 }

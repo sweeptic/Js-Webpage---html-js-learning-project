@@ -9,15 +9,13 @@ $box-shadow-regular: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 
 
 //COLORSff2e63
-$color_primary: #ff3f34;
-//#e74c3c;
-// #f5484a;
-
+$color_primary:#ffffff;
 
 
 $color-grey-dark: #777;
 $color-grey-dark-2: #999;
 $color-grey-dark-3: #333;
+$color-grey-dark-4:  rgba(248, 218, 247, 0.075);
 
 $color-grey-light-1: #f7f7f7;
 
@@ -26,7 +24,12 @@ $color-light-white:   #f0eee1;
 $color-black: #000000; 
 
 //NAVIGATION
-$color-menu-background: #000000;
+$color-desktop-menu-background: rgba(0, 0, 0, 0.137);
+$color-mobile-menu-background: rgba(3, 13, 24, 0.9);
+$color-fixed-desktop-menu-background: rgba(3, 13, 24, 0.9);
+$color-mobile-menu-border-background: lighten( #2f3640, 25%);
+
+
 // #030d18;
 $color-menu-text:  #ffffff;
 
@@ -34,6 +37,8 @@ $color-menu-text:  #ffffff;
 $color-header-main: #ffffff;
 $color-main_background:#999;
 $color-header-sub: #ffffff;
+$color-main-even: #2f3640;
+
 
 
 

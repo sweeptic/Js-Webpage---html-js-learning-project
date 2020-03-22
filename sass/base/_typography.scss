@@ -2,67 +2,13 @@ body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     line-height: 1.7;
-
 }
-
 
 .paragraph {
     font-size: $default-font-size;
     padding-bottom: 3rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-}
-
-
-.c-heading-primary {
-    display: flex;
-    flex-flow: row;
-    width: 70vw;
-    //   height: 40vh;
-    border: .5rem solid white;
-    align-items: center;
-    
-    &--left {
-        // padding-left: 2vw;
-        padding:  1.7vw;
-        font-family: 'Audiowide', cursive;
-        font-size: 20vw;
-        color: white;
-        line-height: 0;
-    }
-
-    &--right {
-        display: flex;
-        justify-content: center;
-        flex: 1;
-        align-self: stretch;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 11vw;
-        color: transparent;
-        overflow: hidden;
-        background-color: #fff;
-        // font-weight: 300;
-       
-
-        &-x {
-            background: url(/img/magnus-engo-W4lcqyH9r8c-unsplash.jpg);
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-            display: block;
-            background-position: bottom;
-            // padding-bottom: 40px;
-
-           
-
-        }
-
-    }
-
-
-
-
-
-
 }
 
 .heading-tertiary {
@@ -73,6 +19,5 @@ body {
     font-weight: 700;
     letter-spacing: .5rem;
     overflow: hidden;
-    // word-wrap: break-word;
     text-shadow: 0 .32rem .5rem rgba($color-black, .2);
 }
